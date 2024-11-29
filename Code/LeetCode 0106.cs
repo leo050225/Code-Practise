@@ -18,7 +18,7 @@ public class Solution {
     {
         if(inorder.Length==0 || postorder.Length==0)return null;//沒有數字的話返回null
 
-        int rootValue = postorder.Last();//確定這棵樹的根結點 後續遍歷的最後一數
+        int rootValue = postorder.Last();//確定這棵樹的根結點 後序遍歷的最後一數
 
         TreeNode root = new TreeNode(rootValue);//創立新的二叉樹根節點
 
@@ -30,7 +30,7 @@ public class Solution {
         //兩者左子樹都在最前面 所以直接用inorder的根節點索引當數量
         root.left = BuildTree(inorder.Take(delimiterIndex).ToArray() , postorder.Take(delimiterIndex).ToArray());//遞歸
 
-        //Skip: 由集合的第一個元素開始記數，到達指定的數量為止的元素都忽略不算在結果集合中
+        //Skip: 由集合的第一個元素開始記數，到達指定的數量為止的元素都忽略 不算在結果集合中
         //inorder右子樹在最後面 所以要跳過[ 根索引+1 ]的數量  postorder的右子樹在中間 所以要跳過左子樹 然後在取從前面[ 總長度 - 索引 - 1 ]數量的數字
         root.right = BuildTree(inorder.Skip(delimiterIndex + 1).ToArray() , postorder.Skip(delimiterIndex).Take(inorder.Length - delimiterIndex - 1).ToArray());//遞歸
 
