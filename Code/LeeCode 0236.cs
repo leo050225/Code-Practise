@@ -25,6 +25,6 @@ public class Solution {
         if(left != null && right==null)return left;
         // 如果右子樹返回 null，說明 p 和 q 都在左子樹中，返回左子樹的结果
 
-        return null;// 如果左右子樹都為 null，则返回 null
+        return null;// 如果左右子樹都為 null，則返回 null
     }
 }
