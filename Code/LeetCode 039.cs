@@ -20,7 +20,7 @@ public class Solution
             return;//返回
         }
 
-        for(int i = start; i < candidates.Length && sum + candidates[i] <= target; i++)
+        for(int i = start; i < candidates.Length && sum + candidates[i] <= target; i++)//sum + candidates[i]就是下一層的總和 如果大於的話中止for
         {
             sum+=candidates[i];//增加總和
             path.Add(candidates[i]);//加入到集合
