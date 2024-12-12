@@ -1,2 +1,2 @@
 # LeetCode-Practise
-LeetCodet程式 自我練習
+LeetCode 題庫練習 (自學中)
