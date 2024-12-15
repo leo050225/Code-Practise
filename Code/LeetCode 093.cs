@@ -24,7 +24,7 @@ public class Solution {
             if(IsVlid(s , start , i))//判斷這個start ~ i的這個區間有沒有符合規則
             {
                 s = s.Insert(i + 1 , ".");//在i後面加入一個逗號
-                Backtracking(s, i+2 , pointSum+1);//調用方法 從逗號後面的位置開始 逗號數量+1
+                Backtracking(s, i+2 , pointSum+1);//遞歸 從逗號後面的位置開始 逗號數量+1
                 s = s.Remove(i + 1 , 1);//回朔
             }
             else break;//區間不合規則的話 中斷循環 後面都不用了
