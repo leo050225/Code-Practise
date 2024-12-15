@@ -12,7 +12,7 @@ public class Solution {
     {
         if(pointSum == 3)//逗點數量為3(已經分出4段的時候)的時候 分隔結束
         {
-            if(IsVlid(s , start , s.Length -1))//判斷4段子串是否符合條件
+            if(IsVlid(s , start , s.Length -1))//判斷第4段子串是否符合條件
             {
                 res.Add(s);//符合條件的話加入到結果集合
             }
