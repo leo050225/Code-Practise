@@ -1,7 +1,7 @@
 public class Solution {
     public IList<IList<int>> Permute(int[] nums) 
     {
-        var used =  new bool[nums.Length];//bool表
+        bool[] used =  new bool[nums.Length];//bool表
         BackTracking(nums,used);//調用
         return res;//返回結果
     }
