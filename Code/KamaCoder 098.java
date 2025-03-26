@@ -1,3 +1,4 @@
+//連接矩陣
 import java.util.*;
 
 public class Main 
