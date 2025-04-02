@@ -48,7 +48,7 @@ public class Main
             int nextY = y + dir[i][1];//新的Y座標
             
             //邊界檢查
-            if(nextY < 0 || nextX < 0 || nextX >= grid.length || nextY >= grid[0].length) continue;
+            if(nextY < 0 || nextX < 0 || nextX >= grid.length || nextY >= grid[0].length) continue;//跳過循環
 
             if(!visited[nextX][nextY] && grid[nextX][nextY] == 1)//沒有訪問過 且 是陸地
             {
